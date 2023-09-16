@@ -1,3 +1,30 @@
 body {
   margin: 0;
 }
+.sidebar_item {
+  padding: 20px 0px 20px 10px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.sidebar_item:hover {
+  background-color: rgba(255, 255, 255, 0.082);
+}
+.sidebar_item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 0%;
+  background-color: rgba(80, 184, 228, 1);
+  transition: all 0.3s ease-in-out;
+}
+.sidebar_item:hover::after {
+  height: 100%;
+}
+
+.css-1g86id8-MuiTreeItem-content {
+  background-color: transparent;
+  padding: 20px 0px 20px 10px;
+  transition: all 0.3s ease-in-out;
+}
