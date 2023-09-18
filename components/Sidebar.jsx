@@ -131,6 +131,7 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
                 position: "relative",
                 color: "color.white",
                 padding: "0 10px 0 0 ",
+                cursor: "pointer",
               }}
             >
               <PowerSettingsNewIcon />
