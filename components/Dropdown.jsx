@@ -73,6 +73,7 @@ const Dropdown = ({ value }) => {
           <AccordionDetails sx={{ padding: "0" }}>
             {value.content.map((item, index) => (
               <Typography
+                key={index}
                 sx={{
                   margin: "0px 0px 0px 50px",
                   padding: "10px 10px 10px 10px",
