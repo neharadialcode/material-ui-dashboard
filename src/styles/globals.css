@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 .sidebar_item {
-  padding: 20px 0px 20px 10px;
+  padding: 20px 20px 20px 20px;
   transition: all 0.3s ease-in-out;
   position: relative;
 }
@@ -27,4 +27,10 @@ body {
   background-color: transparent;
   padding: 20px 0px 20px 10px;
   transition: all 0.3s ease-in-out;
+}
+.css-o4b71y-MuiAccordionSummary-content {
+  margin: 0px !important;
+}
+.active_option {
+  background-color: rgba(255, 255, 255, 0.082);
 }
