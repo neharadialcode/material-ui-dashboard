@@ -26,6 +26,7 @@ const theme = createTheme({
       green: "#01C0AA",
       blue: "#1348FC",
       lightWhite: "rgba(255, 255, 255, 0.182)",
+      skyBlue: "rgba(80, 184, 228, 1)",
     },
   },
   breakpoints: {
