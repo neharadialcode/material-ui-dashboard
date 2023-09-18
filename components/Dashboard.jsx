@@ -8,10 +8,20 @@ const Dashboard = () => {
   const [sideBarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <Box sx={{ p: 0, display: "flex", height: "100vh", overflow: "hidden" }}>
-      <Sidebar sideBarOpen={sideBarOpen} />
-      <Box sx={{ bgcolor: "color.lightBlue", width: "100%" }}>
-        <Header setSidebarOpen={setSidebarOpen} />
+    <Box
+      onClick={() => setSidebarOpen(!sideBarOpen)}
+      sx={{ p: 0, display: "flex", height: "100vh", overflow: "hidden" }}
+    >
+      <Sidebar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
+      <Box
+        sx={{
+          bgcolor: "color.lightBlue",
+          width: "100%",
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        <Header setSidebarOpen={setSidebarOpen} sideBarOpen={sideBarOpen} />
         <ScrollableContent />
       </Box>
     </Box>

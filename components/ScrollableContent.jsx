@@ -8,7 +8,7 @@ import CryptoNews from "./CryptoNews";
 const ScrollableContent = () => {
   return (
     <>
-      <Box sx={{ padding: "10px 32px" }}>
+      <Box sx={{ padding: "10px 32px", zIndex: 1, position: "relative" }}>
         <CardSlider />
         <BTCchart />
         <Box sx={{ display: "flex" }}>

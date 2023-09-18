@@ -8,6 +8,7 @@ const xl = 1023;
 const lg = 991;
 const md = 767;
 const sm = 575;
+const defaultSize = 0;
 
 const theme = createTheme({
   palette: {
@@ -23,7 +24,8 @@ const theme = createTheme({
       lightBlue: "#F3F6FE",
       red: "#EE2E6B",
       green: "#01C0AA",
-      abc: "#1348FC",
+      blue: "#1348FC",
+      lightWhite: "rgba(255, 255, 255, 0.182)",
     },
   },
   breakpoints: {
@@ -35,6 +37,7 @@ const theme = createTheme({
       hd,
       fhd,
       laptop,
+      defaultSize,
     },
   },
 
