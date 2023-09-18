@@ -32,7 +32,6 @@ const Dropdown = ({ value }) => {
       <Box
         sx={{
           position: "relative",
-          zIndex: 1,
         }}
       >
         <Accordion
@@ -40,7 +39,18 @@ const Dropdown = ({ value }) => {
           onClick={handleClick}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "color.white" }} />}
+            expandIcon={
+              <ExpandMoreIcon
+                sx={{
+                  color: "color.white",
+                  width: "30px",
+                  height: "30px",
+                  transform: {
+                    defaultSize: open ? "rotate(-180deg)" : "rotate(-90deg)",
+                  },
+                }}
+              />
+            }
             aria-controls="panel1bh-content"
             id="panel1bh-header"
             color="color.white"

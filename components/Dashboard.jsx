@@ -17,8 +17,8 @@ const Dashboard = () => {
         sx={{
           bgcolor: "color.lightBlue",
           width: "100%",
-          position: "relative",
-          zIndex: 1,
+          position: { sm: "relative" },
+          zIndex: { sm: 1 },
         }}
       >
         <Header setSidebarOpen={setSidebarOpen} sideBarOpen={sideBarOpen} />

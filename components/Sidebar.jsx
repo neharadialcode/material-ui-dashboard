@@ -46,7 +46,8 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
   return (
     <Box
       sx={{
-        zIndex: 0,
+        overflow: "hidden",
+        zIndex: { sm: 0 },
         position: {
           defaultSize: "absolute",
           sm: "relative",
@@ -56,7 +57,6 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
         bgcolor: "color.black",
         color: "color.white",
         height: "100vh",
-        padding: "20px 0px",
         marginLeft: {
           lg: "0",
           defaultSize: sideBarOpen ? "-100%" : "0",
@@ -66,7 +66,7 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
     >
       <Box
         sx={{
-          padding: "0 20px 10px 20px",
+          padding: "20px 20px 10px 20px",
           borderBottom: "1px solid",
           borderColor: "color.lightWhite",
         }}
@@ -115,7 +115,7 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
             sx={{
               display: "flex",
               alignItems: "center",
-              position: "fixed",
+              position: "absolute",
               bottom: "0",
               padding: "20px",
               width: { defaultSize: "100%" },
@@ -136,7 +136,7 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
 
             <Button
               sx={{
-                width: "100%",
+                width: "100vw",
                 display: "flex",
                 padding: "0px",
                 justifyContent: "flex-start",
