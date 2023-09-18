@@ -43,6 +43,7 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
     content: ["third", "Two", "Three", "Four", "Five", "Six"],
     icon: <WbIncandescentIcon />,
   };
+  console.log(sideBarOpen, "sideBarOpen");
   return (
     <Box
       sx={{
@@ -72,22 +73,23 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
         }}
       >
         <Image width={180} height={35} src="/assets/img/logo.png" />
-        <CloseIcon
-          onClick={() => setSidebarOpen(false)}
-          sx={{
-            position: "absolute",
-            right: "20px",
-            top: "20px",
-            cursor: "pointer",
-            color: "color.white",
-            width: "30px",
-            height: "30px",
-            display: {
-              defaultSize: sideBarOpen ? "none" : "block",
-              sm: "none",
-            },
-          }}
-        />
+        <Box onClick={() => setSidebarOpen(!sideBarOpen)}>
+          <CloseIcon
+            sx={{
+              position: "absolute",
+              right: "20px",
+              top: "20px",
+              cursor: "pointer",
+              color: "color.white",
+              width: "30px",
+              height: "30px",
+              display: {
+                defaultSize: sideBarOpen ? "none" : "block",
+                sm: "none",
+              },
+            }}
+          />
+        </Box>
       </Box>
       <Box sx={{ overflow: "auto", height: "calc(100vh - 139px)" }}>
         <Box>

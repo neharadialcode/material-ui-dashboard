@@ -14,10 +14,13 @@ const Header = ({ setSidebarOpen, sideBarOpen }) => {
       }}
     >
       <Box sx={{ display: "flex" }}>
-        <Box sx={{ cursor: "pointer" }}>
-          <ToggleIcon onClick={() => setSidebarOpen(!sideBarOpen)} />
+        <Box
+          sx={{ cursor: "pointer" }}
+          onClick={() => setSidebarOpen(!sideBarOpen)}
+        >
+          <ToggleIcon />
         </Box>
-        <Box sx={{ padding: "0 20px" }}>
+        <Box sx={{ padding: "0 25px" }}>
           <BoxIcon />
         </Box>
       </Box>
