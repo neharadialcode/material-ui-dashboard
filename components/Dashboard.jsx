@@ -8,8 +8,9 @@ const Dashboard = () => {
   const [sideBarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <Box sx={{ p: 0, display: "flex", height: "100vh", overflow: "hidden" }}>
+    <Box sx={{ p: 0, display: "flex", height: "100vh" }}>
       <Sidebar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
+
       <Box
         sx={{
           bgcolor: "color.lightBlue",

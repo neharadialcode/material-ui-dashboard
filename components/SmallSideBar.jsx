@@ -40,7 +40,7 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
         color: "color.white",
         height: "100vh",
         marginLeft: {
-          lg: sideBarOpen ? "0" : "-50px",
+          lg: sideBarOpen ? "0" : "-75px",
         },
         opacity: {
           lg: sideBarOpen ? "1" : "0",
