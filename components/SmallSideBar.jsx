@@ -32,19 +32,21 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
     <Box
       sx={{
         overflow: "hidden",
-        zIndex: { sm: 0 },
+        zIndex: { lg: sideBarOpen ? 0 : -1 },
         position: {
           defaultSize: "absolute",
           sm: "relative",
         },
-        minWidth: { defaultSize: "100%", sm: "50px" },
+        minWidth: { defaultSize: "100%", lg: "50px" },
         transition: "all .3s ease-in-out",
         bgcolor: "color.black",
         color: "color.white",
         height: "100vh",
         margin: {
-          defaultSize: sideBarOpen ? "none" : "none",
-          sm: sideBarOpen ? "0" : "-50px",
+          lg: sideBarOpen ? "0" : "-50px",
+        },
+        opacity: {
+          lg: sideBarOpen ? "1" : "0",
         },
       }}
     >

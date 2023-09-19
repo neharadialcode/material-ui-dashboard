@@ -158,8 +158,16 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
           </Box>
         </Box>
       </Box>
-
-      <SmallSideBar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
+      <Box
+        sx={{
+          display: { lg: "block", defaultSize: "none" },
+        }}
+      >
+        <SmallSideBar
+          sideBarOpen={sideBarOpen}
+          setSidebarOpen={setSidebarOpen}
+        />
+      </Box>
     </>
   );
 };
