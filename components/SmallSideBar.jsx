@@ -39,7 +39,7 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
         bgcolor: "color.black",
         color: "color.white",
         height: "100vh",
-        margin: {
+        marginLeft: {
           lg: sideBarOpen ? "0" : "-50px",
         },
         opacity: {
@@ -72,7 +72,7 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
           {iconsCollection.map((obj, index) => (
             <Box
               key={index}
-              onClick={() => setSidebarOpen(true)}
+              onClick={() => setSidebarOpen(!sideBarOpen)}
               sx={{
                 position: "relative",
                 color: "color.white",
