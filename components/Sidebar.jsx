@@ -14,6 +14,8 @@ import SideBarCommonBtn from "./SideBarCommonBtn";
 import SideBarText from "./SideBarText";
 import CloseIcon from "@mui/icons-material/Close";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
+import SmallSideBar from "./SmallSideBar";
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 
 const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
   const wallet = {
@@ -45,113 +47,120 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
   };
   console.log(sideBarOpen, "sideBarOpen");
   return (
-    <Box
-      sx={{
-        overflow: "hidden",
-        zIndex: { sm: 0 },
-        position: {
-          defaultSize: "absolute",
-          sm: "relative",
-        },
-        minWidth: { defaultSize: "100%", sm: "300px" },
-        transition: "all .3s ease-in-out",
-        bgcolor: "color.black",
-        color: "color.white",
-        height: "100vh",
-        marginLeft: {
-          lg: "0",
-          defaultSize: sideBarOpen ? "-100%" : "0",
-          sm: sideBarOpen ? "-300px" : "0",
-        },
-      }}
-    >
+    <>
       <Box
         sx={{
-          padding: "20px 20px 10px 20px",
-          borderBottom: "1px solid",
-          borderColor: "color.lightWhite",
+          overflow: "hidden",
+          zIndex: { sm: 0 },
+          position: {
+            defaultSize: "absolute",
+            sm: "relative",
+          },
+          minWidth: { defaultSize: "100%", sm: "300px" },
+          transition: "all .3s ease-in-out",
+          bgcolor: "color.black",
+          color: "color.white",
+          height: "100vh",
+          marginLeft: {
+            lg: sideBarOpen ? "-300px" : "0",
+            defaultSize: sideBarOpen ? "-100%" : "0",
+            sm: sideBarOpen ? "-300px" : "0",
+          },
         }}
       >
-        <Image width={180} height={35} src="/assets/img/logo.png" />
-        <Box onClick={() => setSidebarOpen(!sideBarOpen)}>
-          <CloseIcon
-            sx={{
-              position: "absolute",
-              right: "20px",
-              top: "20px",
-              cursor: "pointer",
-              color: "color.white",
-              width: "30px",
-              height: "30px",
-              display: {
-                defaultSize: sideBarOpen ? "none" : "block",
-                sm: "none",
-              },
-            }}
-          />
+        <Box
+          sx={{
+            padding: "20px 20px 10px 20px",
+            borderBottom: "1px solid",
+            borderColor: "color.lightWhite",
+          }}
+        >
+          <Image width={180} height={35} src="/assets/img/logo.png" />
+          <Box onClick={() => setSidebarOpen(!sideBarOpen)}>
+            <CloseIcon
+              sx={{
+                position: "absolute",
+                right: "20px",
+                top: "20px",
+                cursor: "pointer",
+                color: "color.white",
+                width: "30px",
+                height: "30px",
+                display: {
+                  defaultSize: sideBarOpen ? "none" : "block",
+                  sm: "none",
+                },
+              }}
+            />
+          </Box>
         </Box>
-      </Box>
-      <Box sx={{ overflow: "auto", height: "calc(100vh - 139px)" }}>
-        <Box>
-          <SideBarText heading="Quick Access" />
-          <SideBarCommonBtn icon={<HomeIcon />} title="Dashboard" />
-          <SideBarCommonBtn icon={<AutorenewIcon />} title="Exchange" />
-          <Dropdown value={wallet} />
-          <SideBarCommonBtn icon={<AutorenewIcon />} title="Tradeview" />
-        </Box>
-        <Box>
-          <SideBarText heading="Service" />
-          <Dropdown value={transactions} />
-          <Dropdown value={reward} />
-          <Dropdown value={utility} />
-        </Box>
-        <Box>
-          <SideBarText heading="Account" />
-          <SideBarCommonBtn
-            icon={<NotificationsActiveIcon />}
-            title="Notifications"
-          />
-          <SideBarCommonBtn icon={<SettingsIcon />} title="Settings" />
-          <SideBarCommonBtn icon={<HelpOutlineIcon />} title="FAQs" />
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              position: "absolute",
-              bottom: "0",
-              padding: "20px",
-              width: { defaultSize: "100%" },
-              backgroundColor: "color.black",
-              borderTop: "1px solid",
-              borderColor: "color.lightWhite",
-            }}
-          >
+        <Box sx={{ overflow: "auto", height: "calc(100vh - 139px)" }}>
+          <Box>
+            <SideBarText heading="Quick Access" />
+            <SideBarCommonBtn icon={<HomeIcon />} title="Dashboard" />
+            <SideBarCommonBtn icon={<AutorenewIcon />} title="Exchange" />
+            <Dropdown value={wallet} />
+            <SideBarCommonBtn
+              icon={<SignalCellularAltIcon />}
+              title="Tradeview"
+            />
+          </Box>
+          <Box>
+            <SideBarText heading="Service" />
+            <Dropdown value={transactions} />
+            <Dropdown value={reward} />
+            <Dropdown value={utility} />
+          </Box>
+          <Box>
+            <SideBarText heading="Account" />
+            <SideBarCommonBtn
+              icon={<NotificationsActiveIcon />}
+              title="Notifications"
+            />
+            <SideBarCommonBtn icon={<SettingsIcon />} title="Settings" />
+            <SideBarCommonBtn icon={<HelpOutlineIcon />} title="FAQs" />
             <Box
               sx={{
-                position: "relative",
-                color: "color.white",
-                padding: "0 10px 0 0 ",
-                cursor: "pointer",
-              }}
-            >
-              <PowerSettingsNewIcon />
-            </Box>
-
-            <Button
-              sx={{
-                width: "100vw",
                 display: "flex",
-                padding: "0px",
-                justifyContent: "flex-start",
-                color: "color.white",
+                alignItems: "center",
+                position: "absolute",
+                bottom: "0",
+                padding: "20px",
+                width: { defaultSize: "100%" },
+                backgroundColor: "color.black",
+                borderTop: "1px solid",
+                borderColor: "color.lightWhite",
               }}
             >
-              Logout
-            </Button>
+              <Box
+                sx={{
+                  position: "relative",
+                  color: "color.white",
+                  padding: "0 10px 0 0 ",
+                  cursor: "pointer",
+                }}
+              >
+                <PowerSettingsNewIcon />
+              </Box>
+
+              <Button
+                sx={{
+                  width: "100vw",
+                  display: "flex",
+                  padding: "0px",
+                  justifyContent: "flex-start",
+                  color: "color.white",
+                }}
+              >
+                Logout
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Box>
-    </Box>
+
+      <SmallSideBar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
+    </>
   );
 };
 
