@@ -2,31 +2,28 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
-import CloseIcon from "@mui/icons-material/Close";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import HomeIcon from "@mui/icons-material/Home";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import SettingsIcon from "@mui/icons-material/Settings";
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
 import { Box } from "@mui/material";
 import Image from "next/image";
-import SideBarCommonBtn from "./SideBarCommonBtn";
-import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 
 const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
   const iconsCollection = [
-    <HomeIcon />,
-    <AutorenewIcon />,
-    <AccountBalanceWalletIcon />,
-    <SignalCellularAltIcon />,
-    <AccountBalanceIcon />,
-    <CardGiftcardIcon />,
-    <AccountBalanceIcon />,
-    <WbIncandescentIcon />,
-    <NotificationsActiveIcon />,
-    <SettingsIcon />,
-    <HelpOutlineIcon />,
+    { icon: <HomeIcon /> },
+    { icon: <AutorenewIcon /> },
+    { icon: <AccountBalanceWalletIcon /> },
+    { icon: <SignalCellularAltIcon /> },
+    { icon: <AccountBalanceIcon /> },
+    { icon: <CardGiftcardIcon /> },
+    { icon: <WbIncandescentIcon /> },
+    { icon: <NotificationsActiveIcon /> },
+    { icon: <SettingsIcon /> },
+    { icon: <HelpOutlineIcon /> },
   ];
   return (
     <Box
@@ -57,7 +54,12 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
           borderColor: "color.lightWhite",
         }}
       >
-        <Image width={35} height={35} src="/assets/img/small_logo.png" />
+        <Image
+          width={35}
+          height={35}
+          src="/assets/img/small_logo.png"
+          alt="small_logo"
+        />
       </Box>
       <Box
         sx={{
@@ -69,8 +71,8 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
         <Box sx={{ paddingTop: "20px" }}>
           {iconsCollection.map((obj, index) => (
             <Box
-              onClick={() => setSidebarOpen(true)}
               key={index}
+              onClick={() => setSidebarOpen(true)}
               sx={{
                 position: "relative",
                 color: "color.white",
@@ -82,7 +84,7 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
                 },
               }}
             >
-              {obj}
+              {obj.icon}
             </Box>
           ))}
 
@@ -105,6 +107,10 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
                 color: "color.white",
                 padding: "0 10px 0 0 ",
                 cursor: "pointer",
+                transition: "all.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.2) ",
+                },
               }}
             >
               <PowerSettingsNewIcon />

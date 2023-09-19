@@ -75,7 +75,12 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
             borderColor: "color.lightWhite",
           }}
         >
-          <Image width={180} height={35} src="/assets/img/logo.png" />
+          <Image
+            width={180}
+            height={35}
+            src="/assets/img/logo.png"
+            alt="logo"
+          />
           <Box onClick={() => setSidebarOpen(!sideBarOpen)}>
             <CloseIcon
               sx={{
