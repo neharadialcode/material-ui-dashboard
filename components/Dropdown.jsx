@@ -36,26 +36,14 @@ const Dropdown = ({ value }) => {
       >
         <Accordion
           sx={{ backgroundColor: "color.black", color: "color.white" }}
-          onClick={handleClick}
         >
           <AccordionSummary
-            expandIcon={
-              <ExpandMoreIcon
-                sx={{
-                  color: "color.white",
-                  width: "30px",
-                  height: "30px",
-                  transform: {
-                    defaultSize: open ? "rotate(-180deg)" : "rotate(-90deg)",
-                  },
-                }}
-              />
-            }
             aria-controls="panel1bh-content"
             id="panel1bh-header"
             color="color.white"
             className={` ${open && "active_option"} sidebar_item`}
-            sx={{ paddingRight: "50px" }}
+            sx={{ paddingRight: "50px", position: "relative" }}
+            onClick={handleClick}
           >
             <Button
               sx={{
@@ -69,6 +57,19 @@ const Dropdown = ({ value }) => {
               {value.icon}
             </Button>
             <Typography sx={{ color: "color.white" }}>{value.name}</Typography>
+            <ExpandMoreIcon
+              sx={{
+                color: "color.white",
+                width: "30px",
+                height: "30px",
+                position: "absolute",
+                right: "10px",
+                top: "18px",
+                transform: {
+                  defaultSize: open ? "rotate(0deg)" : "rotate(-90deg)",
+                },
+              }}
+            />
           </AccordionSummary>
           <AccordionDetails sx={{ padding: "0" }}>
             {value.content.map((item, index) => (
