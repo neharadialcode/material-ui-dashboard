@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import React, { useRef } from "react";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 const CardSlider = () => {
   const sliderRef = useRef(null);
@@ -26,31 +26,30 @@ const CardSlider = () => {
   };
   return (
     <>
-      <Box>
-        <Button onClick={goToPrevSlide}>left</Button>
-        <Button onClick={goToNextSlide}>right</Button>
-      </Box>
-      <Box sx={{ position: "relative" }}>
-        <Slider {...settings} ref={sliderRef}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
+      <Box sx={{ width: "100%" }}>
+        <Box>
+          <Button onClick={goToPrevSlide}>left</Button>
+          <Button onClick={goToNextSlide}>right</Button>
+        </Box>
+        <Box>
+          <Slider {...settings} ref={sliderRef}>
+            <Box>
+              <Typography variant="h1">1</Typography>
+            </Box>
+            <Box>
+              <Typography variant="h1">1</Typography>
+            </Box>
+            <Box>
+              <Typography variant="h1">1</Typography>
+            </Box>
+            <Box>
+              <Typography variant="h1">1</Typography>
+            </Box>
+            <Box>
+              <Typography variant="h1">1</Typography>
+            </Box>
+          </Slider>
+        </Box>
       </Box>
     </>
   );

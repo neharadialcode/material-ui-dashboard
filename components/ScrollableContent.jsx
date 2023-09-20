@@ -15,7 +15,7 @@ const ScrollableContent = () => {
           position: { sm: "relative" },
         }}
       >
-        {/* <CardSlider /> */}
+        <CardSlider />
         <BTCchart />
         <Box sx={{ display: "flex" }}>
           <LatestActivity />
