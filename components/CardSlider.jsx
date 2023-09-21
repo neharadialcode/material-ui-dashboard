@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { Box, Button, Card, Typography } from "@mui/material";
 import { sliderData } from "./Helper";
 import { RightArrow, LeftArrow } from "./Icons";
+import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 
 const CardSlider = () => {
   const sliderRef = useRef(null);
@@ -38,7 +39,14 @@ const CardSlider = () => {
           }}
         >
           <Box>dfghfjgkhj</Box>
-          <Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <GridViewOutlinedIcon
+              sx={{
+                backgroundColor: "color.white",
+                width: "30px",
+                height: "30px",
+              }}
+            />
             <Button onClick={goToPrevSlide}>
               <LeftArrow />
             </Button>
