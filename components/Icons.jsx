@@ -163,3 +163,20 @@ export const UpArrow = () => (
     />
   </svg>
 );
+
+export const Triangle = () => (
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 8 8"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M8 0V8H0L8 0Z"
+      fill="#1F263E"
+    />
+  </svg>
+);

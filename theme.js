@@ -14,9 +14,9 @@ const theme = createTheme({
   palette: {
     text: {
       xs: "200px",
-      sm: 13,
-      md: 15,
-      lg: 18,
+      sm: "13px",
+      md: "15px",
+      lg: "18px",
     },
     color: {
       black: "#1F263E",
