@@ -1,6 +1,8 @@
 import Slider from "react-slick";
 import React, { useRef } from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Card, Typography } from "@mui/material";
+import { sliderData } from "./Helper";
+import { RightArrow, LeftArrow } from "./Icons";
 
 const CardSlider = () => {
   const sliderRef = useRef(null);
@@ -27,27 +29,57 @@ const CardSlider = () => {
   return (
     <>
       <Box sx={{ width: "100%" }}>
-        <Box>
-          <Button onClick={goToPrevSlide}>left</Button>
-          <Button onClick={goToNextSlide}>right</Button>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "0 32px",
+          }}
+        >
+          <Box>dfghfjgkhj</Box>
+          <Box>
+            <Button onClick={goToPrevSlide}>
+              <LeftArrow />
+            </Button>
+            <Button onClick={goToNextSlide}>
+              <RightArrow />
+            </Button>
+          </Box>
         </Box>
         <Box>
           <Slider {...settings} ref={sliderRef}>
-            <Box>
-              <Typography variant="h1">1</Typography>
-            </Box>
-            <Box>
-              <Typography variant="h1">1</Typography>
-            </Box>
-            <Box>
-              <Typography variant="h1">1</Typography>
-            </Box>
-            <Box>
-              <Typography variant="h1">1</Typography>
-            </Box>
-            <Box>
-              <Typography variant="h1">1</Typography>
-            </Box>
+            {sliderData.map((obj, index) => (
+              <Box key={index}>
+                <Card
+                  sx={{
+                    padding: "20px",
+                    maxWidth: "300px",
+                    boxShadow: "none",
+                    borderRadius: "12px",
+                    border: "1px solid #DFE5F9",
+                    margin: "0 32px",
+                  }}
+                >
+                  <Box
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                      <img src={obj.icon} alt="graphImg" />
+                      <Box sx={{ paddingLeft: "10px" }}>
+                        <Typography variant="h5">{obj.name}</Typography>
+                        <Typography>{obj.name}</Typography>
+                      </Box>
+                    </Box>
+                    <Box>
+                      <Typography variant="h5">{obj.amount}</Typography>
+                      <Typography>{obj.range}</Typography>
+                    </Box>
+                  </Box>
+                  <img width="100%" src={obj.graphImg} alt="graphImg" />
+                </Card>
+              </Box>
+            ))}
           </Slider>
         </Box>
       </Box>

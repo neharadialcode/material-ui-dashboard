@@ -39,8 +39,8 @@ export const BoxIcon = () => {
 export const RightArrow = () => {
   return (
     <svg
-      width="30"
-      height="30"
+      width="40"
+      height="40"
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ export const RightArrow = () => {
       />
       <mask
         id="mask0_0_745"
-        style="mask-type:luminance"
+        style={{ maskType: "luminance" }}
         maskUnits="userSpaceOnUse"
         x="12"
         y="7"
@@ -85,8 +85,9 @@ export const RightArrow = () => {
 export const LeftArrow = () => {
   return (
     <svg
-      width="30"
-      height="30"
+      style={{ transform: "rotate(180deg)" }}
+      width="40"
+      height="40"
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +111,7 @@ export const LeftArrow = () => {
       />
       <mask
         id="mask0_0_745"
-        style="mask-type:luminance"
+        style={{ maskType: "luminance" }}
         maskUnits="userSpaceOnUse"
         x="12"
         y="7"

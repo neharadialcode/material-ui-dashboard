@@ -10,7 +10,6 @@ const ScrollableContent = () => {
     <>
       <Box
         sx={{
-          padding: "10px 32px",
           zIndex: { sm: 1 },
           position: { sm: "relative" },
         }}
