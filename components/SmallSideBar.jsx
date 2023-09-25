@@ -1,29 +1,33 @@
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import HomeIcon from "@mui/icons-material/Home";
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
-import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import SettingsIcon from "@mui/icons-material/Settings";
-import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
-import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
 import { Box } from "@mui/material";
 import Image from "next/image";
+import {
+  BankIcon,
+  GiftIcon,
+  GraphIcon,
+  HelpIcon,
+  HomeIcon,
+  LightIcon,
+  LogoutIcon,
+  NotificationIcon,
+  RefreshIcon,
+  WalletIcon,
+  SettingIcon,
+} from "./Icons";
 
 const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
   const iconsCollection = [
     { icon: <HomeIcon /> },
-    { icon: <AutorenewIcon /> },
-    { icon: <AccountBalanceWalletIcon /> },
-    { icon: <SignalCellularAltIcon /> },
-    { icon: <AccountBalanceIcon /> },
-    { icon: <CardGiftcardIcon /> },
-    { icon: <WbIncandescentIcon /> },
-    { icon: <NotificationsActiveIcon /> },
-    { icon: <SettingsIcon /> },
-    { icon: <HelpOutlineIcon /> },
+    { icon: <RefreshIcon /> },
+    { icon: <WalletIcon /> },
+    { icon: <GraphIcon /> },
+    { icon: <BankIcon /> },
+    { icon: <GiftIcon /> },
+    { icon: <LightIcon /> },
+    { icon: <NotificationIcon color="white" height="22px" width="22px" /> },
+    { icon: <SettingIcon color="white" height="22px" width="22px" /> },
+    { icon: <HelpIcon /> },
   ];
   return (
     <Box
@@ -113,7 +117,7 @@ const SmallSideBar = ({ sideBarOpen, setSidebarOpen }) => {
                 },
               }}
             >
-              <PowerSettingsNewIcon />
+              <LogoutIcon />
             </Box>
           </Box>
         </Box>

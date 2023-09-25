@@ -1,9 +1,8 @@
-import Slider from "react-slick";
-import React, { useRef } from "react";
 import { Box, Button, Card, Typography } from "@mui/material";
+import { useRef } from "react";
+import Slider from "react-slick";
 import { sliderData } from "./Helper";
-import { RightArrow, LeftArrow, Triangle, WindowIcon } from "./Icons";
-import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
+import { LeftArrow, RightArrow, Triangle, WindowIcon } from "./Icons";
 
 const CardSlider = () => {
   const sliderRef = useRef(null);
@@ -29,13 +28,13 @@ const CardSlider = () => {
   };
   return (
     <>
-      <Box sx={{ width: "100%", paddingTop: "20px" }}>
+      <Box sx={{ width: "100%", paddingTop: "30px" }}>
         <Box
           sx={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "0 32px 10px 32px",
+            padding: "0 32px 20px 32px",
           }}
         >
           <Box
@@ -78,7 +77,6 @@ const CardSlider = () => {
                 <Card
                   sx={{
                     padding: "20px",
-                    maxWidth: "300px",
                     boxShadow: "none",
                     borderRadius: "12px",
                     border: "1px solid #DFE5F9",
