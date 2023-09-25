@@ -8,7 +8,15 @@ const Dashboard = () => {
   const [sideBarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <Box sx={{ p: 0, display: "flex", height: "100vh", width: "100%" }}>
+    <Box
+      sx={{
+        p: 0,
+        display: "flex",
+        height: "100vh",
+        width: "100%",
+        overflow: "hidden",
+      }}
+    >
       <Sidebar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
 
       <Box
