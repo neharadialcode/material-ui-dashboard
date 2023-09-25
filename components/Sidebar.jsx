@@ -1,27 +1,33 @@
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
+import CloseIcon from "@mui/icons-material/Close";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import HomeIcon from "@mui/icons-material/Home";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
+import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import SettingsIcon from "@mui/icons-material/Settings";
-import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
 import { Box, Button } from "@mui/material";
 import Image from "next/image";
 import Dropdown from "./Dropdown";
+import {
+  BankIcon,
+  GiftIcon,
+  GraphIcon,
+  HelpIcon,
+  HomeIcon,
+  LightIcon,
+  LogoutIcon,
+  NotificationIcon,
+  RefreshIcon,
+  SettingIcon,
+  WalletIcon,
+} from "./Icons";
 import SideBarCommonBtn from "./SideBarCommonBtn";
 import SideBarText from "./SideBarText";
-import CloseIcon from "@mui/icons-material/Close";
-import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import SmallSideBar from "./SmallSideBar";
-import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 
 const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
   const wallet = {
     name: "My Wallet",
     content: ["one", "Two", "Three", "Four", "Five", "Six"],
-    icon: <AccountBalanceWalletIcon />,
+    icon: <WalletIcon />,
   };
   const transactions = {
     name: "Transactions",
@@ -33,19 +39,18 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
       "Receive Coin",
       "Deposit Coin",
     ],
-    icon: <AccountBalanceIcon />,
+    icon: <BankIcon />,
   };
   const reward = {
     name: "Rewards",
     content: ["third", "Two", "Three", "Four", "Five", "Six"],
-    icon: <CardGiftcardIcon />,
+    icon: <GiftIcon />,
   };
   const utility = {
     name: "Utility Plan",
     content: ["third", "Two", "Three", "Four", "Five", "Six"],
-    icon: <WbIncandescentIcon />,
+    icon: <LightIcon />,
   };
-  console.log(sideBarOpen, "sideBarOpen");
   return (
     <>
       <Box
@@ -103,12 +108,9 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
           <Box>
             <SideBarText heading="Quick Access" />
             <SideBarCommonBtn icon={<HomeIcon />} title="Dashboard" />
-            <SideBarCommonBtn icon={<AutorenewIcon />} title="Exchange" />
+            <SideBarCommonBtn icon={<RefreshIcon />} title="Exchange" />
             <Dropdown value={wallet} />
-            <SideBarCommonBtn
-              icon={<SignalCellularAltIcon />}
-              title="Tradeview"
-            />
+            <SideBarCommonBtn icon={<GraphIcon />} title="Tradeview" />
           </Box>
           <Box>
             <SideBarText heading="Service" />
@@ -119,11 +121,16 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
           <Box>
             <SideBarText heading="Account" />
             <SideBarCommonBtn
-              icon={<NotificationsActiveIcon />}
+              icon={
+                <NotificationIcon color="white" height="22px" width="22px" />
+              }
               title="Notifications"
             />
-            <SideBarCommonBtn icon={<SettingsIcon />} title="Settings" />
-            <SideBarCommonBtn icon={<HelpOutlineIcon />} title="FAQs" />
+            <SideBarCommonBtn
+              icon={<SettingIcon color="white" height="22px" width="22px" />}
+              title="Settings"
+            />
+            <SideBarCommonBtn icon={<HelpIcon />} title="FAQs" />
             <Box
               sx={{
                 display: "flex",
@@ -145,7 +152,7 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
                   cursor: "pointer",
                 }}
               >
-                <PowerSettingsNewIcon />
+                <LogoutIcon />
               </Box>
 
               <Button

@@ -70,10 +70,10 @@ const Header = ({ setSidebarOpen, sideBarOpen }) => {
         <Image width={40} height={40} src="/assets/img/oval.png" />
 
         <Box sx={{ padding: { lg: "0 20px", defaultSize: "0px 10px" } }}>
-          <SettingIcon />
+          <SettingIcon color="#1F263E" height="25px" width="25px" />
         </Box>
         <Box sx={{ padding: { lg: "0 20px 0 0", defaultSize: "0 10px 0 0" } }}>
-          <NotificationIcon />
+          <NotificationIcon color="#1F263E" height="25px" width="25px" />
         </Box>
         <Image width={30} height={30} src="/assets/img/US.png" />
       </Box>
