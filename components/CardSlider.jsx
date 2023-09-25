@@ -33,25 +33,32 @@ const CardSlider = () => {
           sx={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: "end",
             padding: "0 32px 20px 32px",
           }}
         >
           <Box
             sx={{
               display: "flex",
-              alignItems: "center",
+              alignItems: "baseline",
             }}
           >
-            <Triangle />
+            <Triangle color="black" />
             <Typography sx={{ fontSize: "text.sm", padding: "0 10px" }}>
               Welcome
             </Typography>
-            <Triangle />
-            <Typography sx={{ fontSize: "text.sm", padding: "0 10px" }}>
+            <Triangle color="black" />
+            <Typography
+              sx={{
+                fontSize: "text.sm",
+                padding: "0 10px",
+                color: "color.blue",
+                fontWeight: "bold",
+              }}
+            >
               Dashboard
             </Typography>
-            <Triangle />
+            <Triangle color="url(#paint0_linear_0_776)" />
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <WindowIcon />

@@ -164,10 +164,10 @@ export const UpArrow = () => (
   </svg>
 );
 
-export const Triangle = () => (
+export const Triangle = ({ color }) => (
   <svg
-    width="12"
-    height="12"
+    width="15"
+    height="15"
     viewBox="0 0 8 8"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -176,8 +176,21 @@ export const Triangle = () => (
       fill-rule="evenodd"
       clip-rule="evenodd"
       d="M8 0V8H0L8 0Z"
-      fill="#1F263E"
+      fill={color}
     />
+    <defs>
+      <linearGradient
+        id="paint0_linear_0_776"
+        x1="13.1265"
+        y1="6.66481"
+        x2="3.15937"
+        y2="12.9836"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#0043FF" />
+        <stop offset="1" stop-color="#A370F1" />
+      </linearGradient>
+    </defs>
   </svg>
 );
 export const SettingIcon = ({ color, height, width }) => (
