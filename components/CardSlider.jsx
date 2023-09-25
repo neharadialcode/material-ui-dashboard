@@ -2,7 +2,7 @@ import { Box, Button, Card, Typography } from "@mui/material";
 import { useRef } from "react";
 import Slider from "react-slick";
 import { sliderData } from "./Helper";
-import { LeftArrow, RightArrow, Triangle, WindowIcon } from "./Icons";
+import { LeftArrow, RightArrow, Triangle, UpArrow, WindowIcon } from "./Icons";
 
 const CardSlider = () => {
   const sliderRef = useRef(null);
@@ -26,6 +26,7 @@ const CardSlider = () => {
       sliderRef.current.slickPrev();
     }
   };
+
   return (
     <>
       <Box sx={{ width: "100%", paddingTop: "30px" }}>
@@ -111,7 +112,26 @@ const CardSlider = () => {
                     </Box>
                     <Box>
                       <Typography variant="h5">{obj.amount}</Typography>
-                      <Typography>{obj.range}</Typography>
+                      <Typography
+                        sx={{
+                          color: {
+                            defaultSize: String(obj.range).includes("-")
+                              ? "color.red"
+                              : "#01C0AA",
+                          },
+                        }}
+                      >
+                        {String(obj.range).includes("-") ? "" : "+"}
+                        {obj.range}%
+                        <UpArrow
+                          rotate={
+                            String(obj.range).includes("-") ? "180deg" : "0deg"
+                          }
+                          color={
+                            String(obj.range).includes("-") ? "red" : "#01C0AA"
+                          }
+                        />
+                      </Typography>
                     </Box>
                   </Box>
                   <img width="100%" src={obj.graphImg} alt="graphImg" />
