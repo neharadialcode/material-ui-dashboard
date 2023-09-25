@@ -18,7 +18,7 @@ const Dashboard = () => {
           transition: "all .3s ease-in-out",
           maxWidth: {
             lg: sideBarOpen ? "calc(100% - 75px)" : "calc(100% - 300px)",
-            sm: sideBarOpen ? "100%" : "calc(100% - 300px)",
+            sm: sideBarOpen ? "100%" : "100%",
           },
           position: { sm: "relative" },
           zIndex: { sm: 1 },

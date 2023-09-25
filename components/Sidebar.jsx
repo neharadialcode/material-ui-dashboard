@@ -56,10 +56,10 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
       <Box
         sx={{
           overflow: "hidden",
-          zIndex: { sm: 0 },
+          zIndex: { lg: 0, defaultSize: 5 },
           position: {
             defaultSize: "absolute",
-            sm: "relative",
+            lg: "relative",
           },
           minWidth: { defaultSize: "100%", sm: "300px" },
           transition: "all .3s ease-in-out",
@@ -98,7 +98,7 @@ const Sidebar = ({ sideBarOpen, setSidebarOpen }) => {
                 height: "30px",
                 display: {
                   defaultSize: sideBarOpen ? "none" : "block",
-                  sm: "none",
+                  lg: "none",
                 },
               }}
             />

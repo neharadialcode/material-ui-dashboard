@@ -8,12 +8,32 @@ const CardSlider = () => {
   const sliderRef = useRef(null);
   var settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   const goToNextSlide = () => {
     if (sliderRef.current) {
@@ -29,10 +49,15 @@ const CardSlider = () => {
 
   return (
     <>
-      <Box sx={{ width: "100%", paddingTop: "30px" }}>
+      <Box
+        sx={{
+          width: "100%",
+          paddingTop: "30px",
+        }}
+      >
         <Box
           sx={{
-            display: "flex",
+            display: { sm: "flex" },
             justifyContent: "space-between",
             alignItems: "end",
             padding: "0 32px 20px 32px",
