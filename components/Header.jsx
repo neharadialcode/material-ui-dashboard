@@ -1,5 +1,5 @@
 import { Box, InputAdornment, TextField } from "@mui/material";
-import { BoxIcon, ToggleIcon } from "./Icons";
+import { BoxIcon, NotificationIcon, SettingIcon, ToggleIcon } from "./Icons";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
@@ -68,24 +68,13 @@ const Header = ({ setSidebarOpen, sideBarOpen }) => {
         }}
       >
         <Image width={40} height={40} src="/assets/img/oval.png" />
-        <SettingsOutlinedIcon
-          sx={{
-            width: "30px",
-            height: "30px",
-            cursor: "pointer",
-            color: "color.black",
-            padding: { lg: "0 20px", defaultSize: "0px 10px" },
-          }}
-        />
-        <NotificationsNoneOutlinedIcon
-          sx={{
-            width: "30px",
-            height: "30px",
-            cursor: "pointer",
-            color: "color.black",
-            padding: { lg: "0 20px 0 0", defaultSize: "0 10px 0 0" },
-          }}
-        />
+
+        <Box sx={{ padding: { lg: "0 20px", defaultSize: "0px 10px" } }}>
+          <SettingIcon />
+        </Box>
+        <Box sx={{ padding: { lg: "0 20px 0 0", defaultSize: "0 10px 0 0" } }}>
+          <NotificationIcon />
+        </Box>
         <Image width={30} height={30} src="/assets/img/US.png" />
       </Box>
     </Box>

@@ -182,8 +182,8 @@ export const Triangle = () => (
 );
 export const SettingIcon = () => (
   <svg
-    width="18"
-    height="18"
+    width="25"
+    height="25"
     viewBox="0 0 18 18"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -198,8 +198,8 @@ export const SettingIcon = () => (
 );
 export const NotificationIcon = () => (
   <svg
-    width="18"
-    height="18"
+    width="25"
+    height="25"
     viewBox="0 0 18 18"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
