@@ -24,53 +24,122 @@ const BTCchart = () => {
   ];
   return (
     <Box sx={{ padding: "32px" }}>
-      <TableContainer component={Paper} sx={{ boxShadow: "none" }}>
-        <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-          <TableHead
-            sx={{
-              bgcolor: "#FAFBFF",
-              border: "1px solid",
-              borderColor: "#DFE5F9",
-            }}
-          >
-            <TableRow
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <TableContainer
+          component={Paper}
+          sx={{ boxShadow: "none", width: "75%" }}
+        >
+          <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+            <TableHead
               sx={{
                 bgcolor: "#FAFBFF",
                 border: "1px solid",
                 borderColor: "#DFE5F9",
               }}
             >
-              <TableCell sx={{ padding: "12px" }}>Date</TableCell>
-              <TableCell sx={{ padding: "12px" }} align="right">
-                Detail
-              </TableCell>
-              <TableCell sx={{ padding: "12px" }} align="right">
-                Price
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
               <TableRow
-                key={row.name}
                 sx={{
-                  "&:last-child td, &:last-child th": { border: 0 },
+                  bgcolor: "#FAFBFF",
+                  border: "1px solid",
+                  borderColor: "#DFE5F9",
                 }}
               >
-                <TableCell sx={{ padding: "12px" }} component="th" scope="row">
-                  {row.name}
+                <TableCell sx={{ padding: "12px" }}>Date</TableCell>
+                <TableCell sx={{ padding: "12px" }} align="right">
+                  Detail
                 </TableCell>
                 <TableCell sx={{ padding: "12px" }} align="right">
-                  {row.calories}
-                </TableCell>
-                <TableCell sx={{ padding: "12px" }} align="right">
-                  {row.fat}
+                  Price
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{
+                    "&:last-child td, &:last-child th": { border: 0 },
+                  }}
+                >
+                  <TableCell
+                    sx={{ padding: "12px" }}
+                    component="th"
+                    scope="row"
+                  >
+                    {row.name}
+                  </TableCell>
+                  <TableCell sx={{ padding: "12px" }} align="right">
+                    {row.calories}
+                  </TableCell>
+                  <TableCell sx={{ padding: "12px" }} align="right">
+                    {row.fat}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <TableContainer
+          component={Paper}
+          sx={{ boxShadow: "none", width: "25%" }}
+        >
+          <Table
+            sx={{
+              minWidth: "auto",
+              borderLeft: "1px solid ",
+              borderColor: "#DFE5F9",
+            }}
+            size="small"
+            aria-label="a dense table"
+          >
+            <TableHead
+              sx={{
+                bgcolor: "#FAFBFF",
+                border: "1px solid",
+                borderColor: "#DFE5F9",
+              }}
+            >
+              <TableRow
+                sx={{
+                  bgcolor: "#FAFBFF",
+                  border: "1px solid",
+                  borderColor: "#DFE5F9",
+                }}
+              >
+                <TableCell sx={{ padding: "12px 20px" }} align="left">
+                  Detail
+                </TableCell>
+                <TableCell sx={{ padding: "12px 20px" }} align="left">
+                  Price
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{
+                    "&:last-child td, &:last-child th": { border: 0 },
+                  }}
+                >
+                  <TableCell sx={{ padding: "12px 20px" }} align="left">
+                    {row.calories}
+                  </TableCell>
+                  <TableCell sx={{ padding: "12px 20px" }} align="left">
+                    {row.fat}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
     </Box>
   );
 };
