@@ -29,16 +29,21 @@ const CardSlider = () => {
   };
   return (
     <>
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", paddingTop: "20px" }}>
         <Box
           sx={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "0 32px",
+            padding: "0 32px 10px 32px",
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <Triangle />
             <Typography sx={{ fontSize: "text.sm", padding: "0 10px" }}>
               Welcome
@@ -57,15 +62,21 @@ const CardSlider = () => {
                 height: "30px",
               }}
             />
-            <Button onClick={goToPrevSlide}>
+            <Button
+              sx={{ padding: "0 10px", minWidth: "auto" }}
+              onClick={goToPrevSlide}
+            >
               <LeftArrow />
             </Button>
-            <Button onClick={goToNextSlide}>
+            <Button
+              sx={{ padding: 0, minWidth: "auto" }}
+              onClick={goToNextSlide}
+            >
               <RightArrow />
             </Button>
           </Box>
         </Box>
-        <Box>
+        <Box sx={{ margin: "0 22px" }}>
           <Slider {...settings} ref={sliderRef}>
             {sliderData.map((obj, index) => (
               <Box key={index}>
@@ -76,14 +87,23 @@ const CardSlider = () => {
                     boxShadow: "none",
                     borderRadius: "12px",
                     border: "1px solid #DFE5F9",
-                    margin: "0 32px",
+                    margin: "0 10px",
+                    minHeight: "130px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
                   }}
                 >
                   <Box
                     sx={{ display: "flex", justifyContent: "space-between" }}
                   >
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
-                      <img src={obj.icon} alt="graphImg" />
+                    <Box sx={{ display: "flex", alignItems: "start" }}>
+                      <img
+                        width="30px"
+                        style={{ padding: "10px 0 0 0" }}
+                        src={obj.icon}
+                        alt="graphImg"
+                      />
                       <Box sx={{ paddingLeft: "10px" }}>
                         <Typography variant="h5">{obj.name}</Typography>
                         <Typography>{obj.name}</Typography>
