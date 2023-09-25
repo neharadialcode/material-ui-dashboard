@@ -136,7 +136,7 @@ const CardSlider = () => {
                       </Box>
                     </Box>
                     <Box>
-                      <Typography variant="h5">{obj.amount}</Typography>
+                      <Typography variant="h5">¥{obj.amount}</Typography>
                       <Typography
                         sx={{
                           color: {

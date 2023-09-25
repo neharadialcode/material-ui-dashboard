@@ -12,12 +12,6 @@ const defaultSize = 0;
 
 const theme = createTheme({
   palette: {
-    text: {
-      xs: "200px",
-      sm: "13px",
-      md: "15px",
-      lg: "18px",
-    },
     color: {
       black: "#1F263E",
       white: "#fff",
@@ -40,10 +34,6 @@ const theme = createTheme({
       laptop,
       defaultSize,
     },
-  },
-
-  typography: {
-    useNextVariants: true,
   },
 });
 
