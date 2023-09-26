@@ -67,4 +67,21 @@ export const sliderData = [
     range: -0.66,
     graphImg: "/assets/img/slider_img_4.png",
   },
+  {
+    icon: "/assets/img/slider_btc_img.png",
+    name: "BTC",
+    amount: 721882,
+    desc: "Bitcoin",
+    range: -4.66,
+    graphImg: "/assets/img/slider_img_1.png",
+  },
+  {
+    icon: "/assets/img/Bitcoin-2.png",
+
+    name: "ETH",
+    amount: 22370,
+    desc: "Ethereum",
+    range: +0.45,
+    graphImg: "/assets/img/slider_img_2.png",
+  },
 ];
