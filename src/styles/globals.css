@@ -59,3 +59,16 @@ body {
   background-color: rgba(248, 249, 251, 1);
   border: 0;
 }
+.table_sctollbar ::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* Track */
+.table_sctollbar ::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+.table_sctollbar ::-webkit-scrollbar-thumb {
+  background: linear-gradient(75deg, #0043ff 25.69%, #a370f1 105.3%);
+}

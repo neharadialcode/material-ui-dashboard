@@ -14,6 +14,7 @@ import { GraphImgTable, RoundNotificationIcon, UpArrow } from "./Icons";
 const BTCLeftTable = () => {
   return (
     <Box
+      className="table_sctollbar"
       sx={{
         backgroundColor: "color.white",
         width: "75%",
@@ -58,59 +59,111 @@ const BTCLeftTable = () => {
       </Box>
       <Box
         sx={{
-          padding: "10px 20px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "#FAFBFF",
-          borderTop: "1px solid",
-          borderBottom: "1px solid",
-          borderColor: "#DFE5F9",
+          overflow: "auto",
         }}
       >
         <Box
           sx={{
+            padding: "10px 20px",
             display: "flex",
+            justifyContent: "space-between",
             alignItems: "center",
-          }}
-        >
-          <Typography>721,882</Typography>
-          <Typography
-            sx={{
-              paddingLeft: "10px",
-            }}
-            color="color.red"
-          >
-            -4.66% <UpArrow color="red" rotate="180deg" />
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
+            backgroundColor: "#FAFBFF",
+            borderTop: "1px solid",
+            borderBottom: "1px solid",
+            borderColor: "#DFE5F9",
+            overflow: "auto",
+            minWidth: "750px",
           }}
         >
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              padding: "0 10px",
             }}
           >
-            <Typography
-              sx={{
-                color: "#999999",
-              }}
-            >
-              High
-            </Typography>
+            <Typography>721,882</Typography>
             <Typography
               sx={{
                 paddingLeft: "10px",
               }}
+              color="color.red"
             >
-              725,974
+              -4.66% <UpArrow color="red" rotate="180deg" />
             </Typography>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                padding: "0 10px",
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#999999",
+                }}
+              >
+                High
+              </Typography>
+              <Typography
+                sx={{
+                  paddingLeft: "10px",
+                }}
+              >
+                725,974
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                padding: "0 10px",
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#999999",
+                }}
+              >
+                High
+              </Typography>
+              <Typography
+                sx={{
+                  paddingLeft: "10px",
+                }}
+              >
+                725,974
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                padding: "0 10px",
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#999999",
+                }}
+              >
+                High
+              </Typography>
+              <Typography
+                sx={{
+                  paddingLeft: "10px",
+                }}
+              >
+                725,974
+              </Typography>
+            </Box>
           </Box>
           <Box
             sx={{
@@ -122,67 +175,31 @@ const BTCLeftTable = () => {
             <Typography
               sx={{
                 color: "#999999",
+                paddingRight: "10px",
               }}
             >
-              High
+              Price Alert
             </Typography>
-            <Typography
-              sx={{
-                paddingLeft: "10px",
-              }}
-            >
-              725,974
-            </Typography>
+            <RoundNotificationIcon />
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              padding: "0 10px",
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#999999",
-              }}
-            >
-              High
-            </Typography>
-            <Typography
-              sx={{
-                paddingLeft: "10px",
-              }}
-            >
-              725,974
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            padding: "0 10px",
-          }}
-        >
-          <Typography
-            sx={{
-              color: "#999999",
-              paddingRight: "10px",
-            }}
-          >
-            Price Alert
-          </Typography>
-          <RoundNotificationIcon />
         </Box>
       </Box>
       <TableContainer
         component={Paper}
-        sx={{ boxShadow: "none", width: "100%" }}
+        sx={{ boxShadow: "none", width: "100%", border: 0, height: "100%" }}
       >
-        <Table size="small" aria-label="a dense table">
-          <TableBody>
-            <TableRow>
-              <TableCell sx={{ padding: "12px 20px" }}>
+        <Table
+          size="small"
+          aria-label="a dense table"
+          sx={{
+            border: 0,
+            overflow: "auto",
+            minWidth: "1200px",
+          }}
+        >
+          <TableBody sx={{ border: 0 }}>
+            <TableRow sx={{ border: 0 }}>
+              <TableCell sx={{ padding: "12px 20px", border: 0 }}>
                 <GraphImgTable />
               </TableCell>
             </TableRow>

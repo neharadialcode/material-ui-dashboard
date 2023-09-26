@@ -20,7 +20,6 @@ const BTCchart = () => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
         }}
       >
         <BTCLeftTable />
