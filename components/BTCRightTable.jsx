@@ -49,6 +49,7 @@ const BTCRightTable = () => {
           <Typography
             sx={{
               paddingLeft: "10px",
+              fontWeight: "700",
             }}
           >
             Market Cap
