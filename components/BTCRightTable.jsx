@@ -18,13 +18,17 @@ const BTCRightTable = () => {
     <Box
       sx={{
         backgroundColor: "color.white",
-        width: "25%",
+        width: { lg: "25%", defaultSize: "100%" },
         minWidth: "310px",
         borderRadius: "0px 10px 0 0px",
         border: "1px solid ",
         borderLeft: 0,
         borderColor: "#DFE5F9",
         overflow: "hidden",
+        marginTop: {
+          lg: 0,
+          defaultSize: "20px",
+        },
       }}
     >
       <Box

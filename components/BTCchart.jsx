@@ -18,7 +18,7 @@ const BTCchart = () => {
     <Box sx={{ padding: "32px" }}>
       <Box
         sx={{
-          display: "flex",
+          display: { lg: "flex" },
           justifyContent: "space-between",
         }}
       >

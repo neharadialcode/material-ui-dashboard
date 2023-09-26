@@ -17,8 +17,8 @@ const BTCLeftTable = () => {
       className="table_sctollbar"
       sx={{
         backgroundColor: "color.white",
-        width: "75%",
-        borderRadius: "10px 0 0 0px",
+        width: { lg: "75%", defaultSize: "100%" },
+        borderRadius: { lg: "10px 0 0 0px", defaultSize: "10px 10px 0 0px" },
         border: "1px solid ",
         borderColor: "#DFE5F9",
         overflow: "hidden",
