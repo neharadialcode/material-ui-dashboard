@@ -1,18 +1,15 @@
-import React from "react";
 import {
   Box,
-  Button,
   Table,
   TableBody,
   TableCell,
   TableContainer,
-  TableHead,
   TableRow,
   Typography,
 } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import { sliderData } from "./Helper";
-import { GraphImgTable, Triangle, UpArrow, UpDownArrows } from "./Icons";
+import { Triangle, UpArrow, UpDownArrows } from "./Icons";
 const BTCRightTable = () => {
   return (
     <Box

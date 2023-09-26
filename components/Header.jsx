@@ -46,6 +46,7 @@ const Header = ({ setSidebarOpen, sideBarOpen }) => {
               borderRadius: "50px",
               backgroundColor: "rgba(248, 249, 251, 1)",
               padding: "5px 0 5px 10px",
+              height: "45px",
             },
             startAdornment: (
               <InputAdornment>
@@ -67,7 +68,7 @@ const Header = ({ setSidebarOpen, sideBarOpen }) => {
           alignItems: "center",
         }}
       >
-        <Image width={40} height={40} src="/assets/img/oval.png" />
+        <Image width={40} height={40} src="/assets/img/Oval.png" />
 
         <Box sx={{ padding: { lg: "0 20px", defaultSize: "0px 10px" } }}>
           <SettingIcon color="#1F263E" height="25px" width="25px" />
