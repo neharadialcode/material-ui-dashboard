@@ -84,7 +84,7 @@ const LatestActivity = () => {
   };
 
   return (
-    <Box sx={{ padding: "32px" }}>
+    <Box sx={{ padding: "32px", width: "100%" }}>
       <Box
         sx={{
           backgroundColor: "color.white",

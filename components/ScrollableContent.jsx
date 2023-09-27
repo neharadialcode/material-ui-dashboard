@@ -18,7 +18,7 @@ const ScrollableContent = () => {
       >
         <CardSlider />
         <BTCchart />
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <LatestActivity />
           <CryptoNews />
         </Box>
