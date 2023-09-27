@@ -4,7 +4,7 @@ import { Triangle } from "./Icons";
 
 const CryptoNews = () => {
   return (
-    <Box sx={{ padding: "32px", width: "100%" }}>
+    <Box sx={{ padding: "32px 32px 32px 0", width: "100%" }}>
       <Box
         sx={{
           backgroundColor: "color.white",
@@ -33,8 +33,41 @@ const CryptoNews = () => {
                 fontWeight: "700",
               }}
             >
-              Latest Activities
+              Crypto Newsfeed{" "}
             </Typography>
+          </Box>
+          <Box
+            sx={{
+              padding: "20px",
+            }}
+          >
+            <Box
+              sx={{
+                padding: "10px 20px",
+                borderRadius: "12px",
+                border: "1px solid ",
+                borderColor: "#DFE5F9",
+              }}
+            >
+              <Typography>Today 11:36</Typography>
+              <Typography>
+                Beyond Bad Trades: Cybersecurity Risks to Cryptocurrency
+                Exchange Users
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "end",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Typography sx={{ paddingRight: "10px" }}>
+                  Cryptocurrency-mining malware is not the only type of
+                  cryptocurrency-related threat — cybercriminals have resorted…
+                </Typography>
+                <Typography>Security</Typography>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>

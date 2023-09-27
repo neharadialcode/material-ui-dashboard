@@ -121,13 +121,21 @@ const LatestActivity = () => {
         {/*========================== LATEST ACTIVITY TABS ============================*/}
         <Box sx={{ width: "100%", typography: "body1" }}>
           <TabContext value={value}>
-            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Box
+              sx={{
+                borderBottom: 1,
+                borderColor: "divider",
+                width: "calc(50vw - 300px)",
+                overflow: "hidden",
+              }}
+            >
               <TabList
                 onChange={handleChange}
                 aria-label="lab API tabs example"
                 sx={{
                   paddingBottom: "15px",
                   minHeight: "0px",
+                  overflow: "auto",
                 }}
               >
                 {tabData.map((item, index) => {

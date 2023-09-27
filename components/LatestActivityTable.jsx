@@ -25,7 +25,7 @@ const LatestActivityTable = () => {
   ];
   return (
     <TableContainer component={Paper} sx={{ boxShadow: "none" }}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+      <Table sx={{ minWidth: 600 }} size="small" aria-label="a dense table">
         <TableHead
           sx={{
             bgcolor: "#FAFBFF",
