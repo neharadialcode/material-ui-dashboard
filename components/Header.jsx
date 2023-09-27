@@ -68,7 +68,7 @@ const Header = ({ setSidebarOpen, sideBarOpen }) => {
           alignItems: "center",
         }}
       >
-        <Image width={40} height={40} src="/assets/img/Oval.png" />
+        <Image width={40} height={40} src="/assets/img/Oval.png" alt="oval" />
 
         <Box sx={{ padding: { lg: "0 20px", defaultSize: "0px 10px" } }}>
           <SettingIcon color="#1F263E" height="25px" width="25px" />
@@ -76,7 +76,7 @@ const Header = ({ setSidebarOpen, sideBarOpen }) => {
         <Box sx={{ padding: { lg: "0 20px 0 0", defaultSize: "0 10px 0 0" } }}>
           <NotificationIcon color="#1F263E" height="25px" width="25px" />
         </Box>
-        <Image width={30} height={30} src="/assets/img/US.png" />
+        <Image width={30} height={30} src="/assets/img/US.png" alt="US" />
       </Box>
     </Box>
   );

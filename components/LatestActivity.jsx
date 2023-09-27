@@ -125,10 +125,20 @@ const LatestActivity = () => {
               <TabList
                 onChange={handleChange}
                 aria-label="lab API tabs example"
+                sx={{
+                  paddingBottom: "15px",
+                  minHeight: "0px",
+                }}
               >
                 {tabData.map((item, index) => {
                   return (
                     <Tab
+                      sx={{
+                        padding: "0 0 5px 0",
+                        minWidth: "0px",
+                        minHeight: "0px",
+                        margin: " 0 20px",
+                      }}
                       onClick={() => setUpdatedText(item)}
                       key={index}
                       label={item.name}
