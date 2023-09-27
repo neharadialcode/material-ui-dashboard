@@ -89,7 +89,7 @@ const LatestActivity = () => {
         sx={{
           backgroundColor: "color.white",
           minWidth: "310px",
-          borderRadius: "10px 10px 0 0px",
+          borderRadius: "10px 10px",
           border: "1px solid ",
           borderColor: "#DFE5F9",
           overflow: "hidden",

@@ -1,6 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { Triangle } from "./Icons";
+import Image from "next/image";
+import CryptoNewsCard from "./CryptoNewsCard";
 
 const CryptoNews = () => {
   return (
@@ -9,7 +11,7 @@ const CryptoNews = () => {
         sx={{
           backgroundColor: "color.white",
           minWidth: "310px",
-          borderRadius: "10px 10px 0 0px",
+          borderRadius: "10px ",
           border: "1px solid ",
           borderColor: "#DFE5F9",
           overflow: "hidden",
@@ -17,13 +19,19 @@ const CryptoNews = () => {
       >
         {/*========================== TITLE ============================*/}
 
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "16px 20px 0 20px",
+          }}
+        >
           <Box
             sx={{
               display: "flex",
               justifyContent: "start",
               alignItems: "baseline",
-              padding: "16px 20px",
             }}
           >
             <Triangle color="url(#paint0_linear_0_776)" />
@@ -33,42 +41,27 @@ const CryptoNews = () => {
                 fontWeight: "700",
               }}
             >
-              Crypto Newsfeed{" "}
+              Crypto Newsfeed
             </Typography>
           </Box>
-          <Box
+          <Button
             sx={{
-              padding: "20px",
+              border: "1px solid",
+              borderColor: "#EEEFF1",
+              color: "color.black",
+              textTransform: "none",
             }}
           >
-            <Box
-              sx={{
-                padding: "10px 20px",
-                borderRadius: "12px",
-                border: "1px solid ",
-                borderColor: "#DFE5F9",
-              }}
-            >
-              <Typography>Today 11:36</Typography>
-              <Typography>
-                Beyond Bad Trades: Cybersecurity Risks to Cryptocurrency
-                Exchange Users
-              </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "end",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography sx={{ paddingRight: "10px" }}>
-                  Cryptocurrency-mining malware is not the only type of
-                  cryptocurrency-related threat — cybercriminals have resorted…
-                </Typography>
-                <Typography>Security</Typography>
-              </Box>
-            </Box>
-          </Box>
+            Subscribe
+          </Button>
+        </Box>
+        <Box
+          sx={{
+            padding: "20px",
+          }}
+        >
+          <CryptoNewsCard image="/assets/img/card_small_img.png" />
+          <CryptoNewsCard image="/assets/img/card_small_img2.png" />
         </Box>
       </Box>
     </Box>
