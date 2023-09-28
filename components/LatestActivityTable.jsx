@@ -1,18 +1,12 @@
 import {
-  Box,
-  Tab,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from "@mui/material";
-import React from "react";
 import Paper from "@mui/material/Paper";
-import { Triangle } from "./Icons";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
 const LatestActivityTable = () => {
   function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };

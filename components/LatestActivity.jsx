@@ -103,7 +103,7 @@ const LatestActivity = () => {
               display: "flex",
               justifyContent: "start",
               alignItems: "baseline",
-              padding: "16px 20px",
+              padding: "24px 20px",
             }}
           >
             <Triangle color="url(#paint0_linear_0_776)" />
@@ -125,8 +125,6 @@ const LatestActivity = () => {
               sx={{
                 borderBottom: 1,
                 borderColor: "divider",
-                width: "calc(50vw - 300px)",
-                overflow: "hidden",
               }}
             >
               <TabList
@@ -156,7 +154,12 @@ const LatestActivity = () => {
                 })}
               </TabList>
             </Box>
-            <TabPanel value={updatedText.id}>
+            <TabPanel
+              sx={{
+                padding: { defaultSize: updatedText.id === 1 ? 0 : "20px" },
+              }}
+              value={updatedText.id}
+            >
               <Typography>{updatedText.desc}</Typography>
             </TabPanel>
           </TabContext>
