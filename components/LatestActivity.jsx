@@ -1,18 +1,7 @@
-import {
-  Box,
-  Tab,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
-import React from "react";
-import Paper from "@mui/material/Paper";
-import { Triangle } from "./Icons";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
+import { Box, Tab, Typography } from "@mui/material";
+import React from "react";
+import { Triangle } from "./Icons";
 import LatestActivityTable from "./LatestActivityTable";
 const tabData = [
   {
@@ -125,6 +114,8 @@ const LatestActivity = () => {
               sx={{
                 borderBottom: 1,
                 borderColor: "divider",
+                width: "calc(50vw - 200px)",
+                overflow: "auto",
               }}
             >
               <TabList
@@ -133,7 +124,7 @@ const LatestActivity = () => {
                 sx={{
                   paddingBottom: "15px",
                   minHeight: "0px",
-                  overflow: "auto",
+                  minWidth: "600px",
                 }}
               >
                 {tabData.map((item, index) => {
@@ -144,6 +135,7 @@ const LatestActivity = () => {
                         minWidth: "0px",
                         minHeight: "0px",
                         margin: " 0 20px",
+                        minWidth: "0px",
                       }}
                       onClick={() => setUpdatedText(item)}
                       key={index}
@@ -160,7 +152,7 @@ const LatestActivity = () => {
               }}
               value={updatedText.id}
             >
-              <Typography>{updatedText.desc}</Typography>
+              <Box>{updatedText.desc}</Box>
             </TabPanel>
           </TabContext>
         </Box>
